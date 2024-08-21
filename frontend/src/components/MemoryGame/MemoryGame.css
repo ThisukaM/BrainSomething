@@ -1,0 +1,27 @@
+body {
+ background-color: #333333; 
+ height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.tiles {
+
+    display: grid;
+    grid-template-columns: repeat(10, 95px);
+    gap: 8px;
+}
+
+.tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    width: 95px;
+    background: white;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
