@@ -1,5 +1,6 @@
 let level = 4;
 let tileNeeded = 1;
+let strikes = 0;
 
 function generateRandomTiles(numberOfTiles) {
     const tilesContainer = document.getElementById('tiles');
@@ -56,6 +57,13 @@ function onTileClick(tileNumber) {
         }
     }
     else{
+        strikes++;
+        tileNeeded = 1;
+        document.getElementById('strikes').textContent = `Strikes: ${strikes}/3`;
+        generateRandomTiles(level);
+        if(strikes == 3){
+        document.getElementById('popup').style.display = 'flex';
+        }
         alert('Wrong! Tile ' + tileNumber + ' clicked!');
     }
 }
