@@ -30,7 +30,15 @@ body {
     pointer-events: none; 
 }
 
-.score {
-    margin: 0;
-    color:aqua
+#scoreboard {
+    color:aliceblue;
+    position: absolute; 
+    top: 20px;
+    left: 20px;
+    margin: 0px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
 }

@@ -36,6 +36,12 @@ function generateRandomTiles(numberOfTiles) {
 }
 
 function onTileClick(tileNumber) {
+    if(tileNeeded == 1){
+        const tiles = document.querySelectorAll('.tile');
+        tiles.forEach(tile => {
+            tile.textContent = "";
+        });
+    }
 
     if(tileNumber == tileNeeded){
         removeTileByID(document.getElementById(tileNumber-1));
@@ -44,6 +50,7 @@ function onTileClick(tileNumber) {
         }
         else if(tileNeeded == level){
             level++;
+            document.getElementById('scoreboard').textContent = `Level: ${level}`;
             tileNeeded = 1;
             generateRandomTiles(level);
         }
