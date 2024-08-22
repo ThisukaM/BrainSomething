@@ -3,7 +3,7 @@ import './Chimptest.css';
 
 function Chimptest() {
 
-    // Set initial game state
+    // Set initial game state.
   let level = 4;
   let tileNeeded = 1;
   let strikes = 0;
