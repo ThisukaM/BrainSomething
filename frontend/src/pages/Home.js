@@ -37,7 +37,7 @@ const Home = () => {
           <div className="card">
             <h3>Chimp Test</h3>
             <img src={monkeyIcon} alt="Monkey" className="card-icon" />
-            <p>Are you a monkey?</p>
+            <p>Is your memory better than a monkey's?</p>
             <Link to="/chimp-test" className="play-link">
               Play Chimp Test
             </Link>

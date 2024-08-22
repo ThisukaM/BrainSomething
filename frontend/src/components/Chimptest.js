@@ -11,7 +11,7 @@ function Chimptest() {
 
     return () => {
       const tilesContainer = document.getElementById('tiles');
-      tilesContainer.innerHTML = '';
+      if (tilesContainer) tilesContainer.innerHTML = '';
     };
   }, [level]);
 
