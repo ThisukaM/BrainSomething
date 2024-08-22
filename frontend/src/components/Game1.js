@@ -51,14 +51,20 @@ const Game1 = () => {
 
     }, [gameOver]);
 
+    const restartGame = () => {
+        window.location.reload();
+    }
+
+
+
     return (
         <div className="game-container">
             <div id="dino"></div>
             <div id="cactus"></div>
             {gameOver && (
-                <div className="game-over">
-                    Game Over
-                </div>
+                <button className="game-over" onClick={restartGame}>
+                    Game Over. Play again.
+                </button>
             )}
         </div>
     );

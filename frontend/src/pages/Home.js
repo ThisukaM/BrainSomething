@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 // resources
 import dinosaurIcon from "../resources/images/dinosaur.png";
-import reactionIcon from "../resources/images/reaction.png"; // Add an icon for the reaction game
+import eyeIcon from "../resources/images/eyeicon.png";
+import reactionIcon from "../resources/images/reactionClock.png"; // Add an icon for the reaction game
 import monkeyIcon from "../resources/images/monkey.png";
-import ColourPuzzle from "../components/ColourPuzzle"
-import Game1 from "../components/Game1";
+
 
 // components
 const Home = () => {
@@ -15,11 +15,11 @@ const Home = () => {
         <div className="cards-container">
           {/* Card for Game 1 */}
           <div className="card">
-            <h3>Game 1</h3>
+            <h3>Dino Jump</h3>
             <img src={dinosaurIcon} alt="Dinosaur" className="card-icon" />
             <p>A fun jumping game</p>
-            <Link to="/Game1" className="play-link">
-              Play Game 1
+            <Link to="/dino-jump" className="play-link">
+              Play Dino Jump
             </Link>
           </div>
 
@@ -32,6 +32,15 @@ const Home = () => {
               Play Reaction Game
             </Link>
           </div>
+          {/* Card for colour puzzle */}
+        <div className="card">
+          <h3>Colour Puzzle</h3>
+          <img src={eyeIcon} alt="Eye" className="card-icon" />
+          <p>A tricky observation game</p>
+          <Link to="/colour-puzzle" className="play-link">
+            Play Colour Puzzle
+          </Link>
+        </div>
 
           {/* Card for Chimp Test Game */}
           <div className="card">

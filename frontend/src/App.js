@@ -9,6 +9,7 @@ import ReactionGame from './components/ReactionGame';
 import ChimpTest from "./components/Chimptest";
 
 import ColourPuzzle from "./components/ColourPuzzle";
+import ColourPuzzleInfo from "./components/ColourPuzzleInfo";
 
 
 function App() {
@@ -19,11 +20,10 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path="/" element={<Home />} />
-
-            <Route path="/game1" element={<Game1 />} />
+            <Route path="/dino-jump" element={<Game1 />} />
+            <Route path="/colour-puzzle" element={<ColourPuzzleInfo/>}/>
+            <Route path="/colour-puzzle/start" element={<ColourPuzzle/>}/>
             <Route path="/reaction-game" element={<Reaction />} />
-
-            <Route path="colourpuzzle" element={<ColourPuzzle />} />
             <Route path="/chimp-test" element={<ChimpTest />} />
           </Routes>
         </div>

@@ -84,7 +84,8 @@ header a {
 
 .cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
   margin-top: 50px;
 }
 
@@ -129,4 +130,5 @@ header a {
 
 .play-link:hover {
   background: #0e8c5f;
+  cursor: pointer;
 }
