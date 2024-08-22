@@ -57,15 +57,19 @@ function onTileClick(tileNumber) {
         }
     }
     else{
+        
         strikes++;
-        tileNeeded = 1;
+        flashText();
         document.getElementById('strikes').textContent = `Strikes: ${strikes}/3`;
-        generateRandomTiles(level);
         if(strikes == 3){
-        document.getElementById('popup').style.display = 'flex';
-        }
-        alert('Wrong! Tile ' + tileNumber + ' clicked!');
-    }
+            document.getElementById('popup').style.display = 'flex';
+            document.getElementById('overlay').style.display = 'flex';
+            }
+            else{
+                tileNeeded = 1;
+                generateRandomTiles(level);    
+            }
+         }
 }
 
 function removeTileByID(tile){
@@ -76,3 +80,23 @@ function removeTileByID(tile){
 }
 
 generateRandomTiles(level);
+
+document.getElementById('rounded-button').addEventListener('click', function() {
+    level = 4;
+    tileNeeded = 1;
+     strikes = 0;
+     document.getElementById('strikes').textContent = `Strikes: ${strikes}/3`;
+     document.getElementById('scoreboard').textContent = `Level: ${level}`;
+    generateRandomTiles(level);
+    document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+});
+
+function flashText() {
+    const textElement = document.getElementById('strikes');
+    textElement.classList.add('flash');
+
+    setTimeout(() => {
+        textElement.classList.remove('flash');
+    }, 1000); 
+}
