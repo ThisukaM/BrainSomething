@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // resources
 import dinosaurIcon from "../resources/images/dinosaur.png";
 import reactionIcon from "../resources/images/reaction.png"; // Add an icon for the reaction game
+import monkeyIcon from "../resources/images/monkey.png";
 import ColourPuzzle from "../components/ColourPuzzle"
 import Game1 from "../components/Game1";
 
@@ -29,6 +30,16 @@ const Home = () => {
             <p>Test your reaction speed</p>
             <Link to="/reaction-game" className="play-link">
               Play Reaction Game
+            </Link>
+          </div>
+
+          {/* Card for Chimp Test Game */}
+          <div className="card">
+            <h3>Chimp Test</h3>
+            <img src={monkeyIcon} alt="Monkey" className="card-icon" />
+            <p>Are you a monkey?</p>
+            <Link to="/chimp-test" className="play-link">
+              Play Chimp Test
             </Link>
           </div>
         </div>

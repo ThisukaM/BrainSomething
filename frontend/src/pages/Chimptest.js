@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './MemoryGame.css'; // Import CSS directly in your JS file
+import './MemoryGame.css'; 
 import Chimptest from '../components/Chimptest/Chimptest';
 
 function ChimpTest() {
-    // State to manage whether the popup is shown
     const [showPopup, setShowPopup] = useState(false);
 
     return (
@@ -16,7 +15,6 @@ function ChimpTest() {
                 <h2 id="strikes">Strikes: 0/3</h2>
             </div>
             <div className="tiles" id="tiles">
-                {/* Your game tiles would go here */}
             </div>
             {showPopup && (
                 <div id="popup" className="popup">

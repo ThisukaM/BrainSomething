@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Game1 from "./components/Game1";
 import Reaction from './pages/Reaction';
 import ReactionGame from './components/ReactionGame';
+import ChimpTest from "./components/Chimptest";
 
 import ColourPuzzle from "./components/ColourPuzzle";
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/reaction-game" element={<Reaction />} />
 
             <Route path="colourpuzzle" element={<ColourPuzzle />} />
+            <Route path="/chimp-test" element={<ChimpTest />} />
           </Routes>
         </div>
       </BrowserRouter>
