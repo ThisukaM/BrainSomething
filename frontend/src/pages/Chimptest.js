@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MemoryGame.css'; // Import CSS directly in your JS file
-import MemoryGame from '../components/Chimptest/Chimptest';
+import Chimptest from '../components/Chimptest/Chimptest';
 
 function ChimpTest() {
     // State to manage whether the popup is shown
